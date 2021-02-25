@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Toxic comment classification</title>
+<style>
+body{
+background:-webkit-linear-gradient(#f5f1c1,#c0f0e2,#f5f1c1);
+}
+h3{
+margin:0auto
+}
+</style>
+</head>
+<body>
+<center>
+<h2>Your Text : {{t}}</h2>
+<hr>
+<div>
+<h3>Toxic:  {{pred[0]}}</h3>
+<h3>Severe Toxic: {{pred[1]}}</h3>
+<h3>Obscence: {{pred[2]}}</h3>
+<h3>Threat: {{pred[3]}}</h3>
+<h3>Insult: {{pred[4]}}</h3>
+<h3>Identity Hate: {{pred[5]}}</h3>
+</div>
+</center>
+
+</body>
+</html>

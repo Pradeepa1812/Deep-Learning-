@@ -1,0 +1,7 @@
+->Data Augumentation helps you to create new images incase if you have very less number of images for training by 
+using this to get more number of similar images
+
+->I'm using Google Colab to implement these  Data Augumentation Project using Keras 
+->Then I'll import all those necessary libraries in keras
+->ImageDataGenerator class is very useful in image classification
+->Batch_size=Number of samples proceed before the model is updated

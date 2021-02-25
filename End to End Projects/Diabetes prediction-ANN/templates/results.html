@@ -1,0 +1,38 @@
+<html>
+<head>	
+<title>Diabetes Predictor</title>
+<style>
+.divs{
+margin:50 auto;
+}
+div {
+  background:-webkit-linear-gradient(#543c96,#9a81de,#5226c9,#160447);
+  width: 600px;
+  height:300px;
+  border: 15px solid #afe81e;
+  padding: 50px;
+  margin: 20px;
+ }
+ html{
+background:black
+}
+span,h1{
+color:white
+}
+</style>
+</head>
+<body>
+		<!-- Result -->
+		<div class='divs'>
+			{% if prediction>0.5 %}
+			    <h1><u>Diabetes Result</u> </h1><br>
+				<h1>Prediction: <span >Oops!  You have DIABETES.</span></h1>
+			{% elif prediction< 0.5 %}
+				<h1>Prediction: <span >Great! You DON'T have diabetes.</span></h1>
+				
+			{% endif %}
+		</div>
+
+
+</body>
+</html>

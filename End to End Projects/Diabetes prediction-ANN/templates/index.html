@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Diabetes Prediction</title>
+<style>
+.divs{
+margin:50 auto;
+}
+html{
+background:black;
+}
+div {
+  background:-webkit-linear-gradient(#543c96,#9a81de,#5226c9,#160447);   
+  width: 800px;
+  border: 15px solid #afe81e;
+  padding: 15px;
+  margin: 10px;
+ }
+h1{
+color:white
+}
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttons {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<center><h1><i><u>Diabetes Prediction</u></i></h1></center>
+<div class="divs">
+<form action="{{ url_for('predict') }}" method="POST">
+<h2><i><u>Fill the below parameters</u></i></h2>
+<input  class="button" type="text" size="30" name="pregnancies" placeholder="Number of Pregnancies eg. 0",required><br><br>
+<input  class="button" type="text" size="30" name="glucose" placeholder="Glucose (mg/dL) eg. 80",required="required"><br><br>
+<input  class="button" type="text" size="30" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80",required="required"><br><br>
+<input  class="button" type="text" size="30" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20",required="required"><br><br>
+<input  class="button" type="text" size="30" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80",required="required"><br><br>
+<input  class="button" type="text" size="30" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1",required="required"><br><br>
+<input  class="button" type="text" size="30" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52",required="required"><br><br>
+<input  class="button" type="text" size="30" name="age" placeholder="Age (years) eg. 34"><br><br>
+<input type="submit" class="buttons" value="Predict">
+</form>
+</div>
+</body>
+</html>
