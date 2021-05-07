@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{url_for('static',filename='fruit.css')}}">
+  <title>Fruit Classifier</title>
+
+<style>
+ 
+  body{
+  background-image: url("fp.jpg")
+  }
+  .topcorner{
+   position:absolute;
+   top:4px;
+   right:40px;
+  }
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+ 
+  
+</head>
+<body>
+<center><h1 style="color: orangered;">Fruit Recognition Along with Nutrients</h1></center>
+<br>
+<img src="{{url_for('static',filename='sa.jpg')}}" style="width:840px;height:520px;" >
+
+
+
+<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+<div class="topcorner" >
+  <pre>
+  <br>
+  <br>   <br>
+
+  <h2 style="color: purple; font-family:Algerian ;"><u>Upload Image to Classify Fruit</u></h2>
+  <h3 style="font-family:Algerian ;"><b>   Choose Image:</b></h3>
+  <input type="file" name="file" accept=".png, .jpg, .jpeg" multiple><br><br>
+ 
+   <button type="submit" class="button">Predict</button>
+  </pre>
+</div>
+</form>
+
+</body>
+</html>

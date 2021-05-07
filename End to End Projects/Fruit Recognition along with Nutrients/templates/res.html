@@ -1,0 +1,135 @@
+<html>
+<head>
+  <title>Fruit Classifier</title>
+  
+<style>
+
+  .topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+  </style>
+
+</head>
+<body>
+<img src="{{url_for('static',filename='right.jpg')}}" style="width:1340px;height:700px;" >
+<div class="topleft">
+<center><h1 style="color: orangered; font-family:Algerian ;">Fruit Recognition Along with Nutrients</h1></center>
+
+<div>
+ <h3 style="font-family:Algerian ;"><b> <u>Uploaded Image :</u></b></h3>
+
+<br>
+<img src=" {{url_for('send_image', filename=image_name)}}" style="width:280px;height:230px;">
+<br>
+
+<h2 style="font-family:Algerian ;color: green;">Fruit Name: {{text}}</h2>
+{% if text =='Banana' %}
+<h4><pre>
+* Bananas are good source of Potassium,Magnesium ,Pottasium and Vitamins like B6,B12 etc...
+* Bananas are rich source of carbohydrates that can be digest easily.
+* Fiber rich banana peels can help regulate the digestive system, easing both constipation and diarrhea
+  also used for Sparkling Teeth,Pain Reliever,UV Protection,Cures Pimples.
+* It contains Vitamin A which helps in skin Lightening, Brightening and prevents Wrinkles.
+</pre></h4>
+{% elif text =='Corn' %}
+<h3><pre>
+* Corn contain rich source of Fiber also contain Zinc,magnesium,copper,iron and manganese and antioxidants.
+* It is good for the heart, prevents constipation, helps to manage diabetes and is good for your skin.
+* Corn contains a high amount of calories. As a result it is used to gain weight quickly.
+* Corn provides minerals,prevent cancer,anemia and diabetes also it was used for cosmetics and 
+  good for the eyes and skincare. 
+* Corn has extremely high amount of fatty acids and therefore should be consumed with caution. 
+
+</pre></h3>
+{% elif text =='Cucumber' %}
+<h3><pre>
+* Cucumbers are low in calories and contain a good amount of water and soluble fiber,making them ideal 
+  for promoting hydration and aiding in weight loss.
+* Cucumbers have a high water content.
+
+</pre></h3>
+{% elif text =='Grapes' %}
+<h3><pre>
+* Loaded with antioxidants and Packed with Nurients ,Escepically Vitamin C and K.
+* High Source of Pottasium.
+* Good for eyes and Knees also helps to decrease the blood pressure,cholestrol and 
+  blood sugar level against diabetes .
+* Boost Brain Power and prevent Chronic Disease and skin problems.
+* Anti-Inflammatory Properties -It brings about to the arteries,promotes heart health and 
+  helps in repair function of the body.
+</pre></h3>
+{% elif text =='Guava' %}
+<h3><pre>
+* Guavas has low in calories,loaded with fiber and excellent addition to a healthy diet. 
+* It help to reduce blood sugar level,weight loss and may help to releive painful symptoms of Mensuration
+* Helps to boost your immunity and heart health.
+* Good for pregnant mothers,diabetics also helps to improves hormanal function and vision. 
+* It contain wide range of vitamins and antioxidants .It may protect your skin from damage,which can slow down
+  its aging process,helping prevent wrinkles.
+
+</pre></h3>
+{% elif text =='Lemon' %}
+<h3><pre>
+* Citrus fruits like lemons are high in vitamin C. Vitamin C may reduce your risk of 
+  cardiovascular disease and stroke and lower blood pressure.
+* Help to control weight and Improve Digestive health.
+* Protect Against anemia and Prevent Kidney Stones.
+* Reduce Cancer Risk.
+</pre></h3>
+{% elif text =='Orange' %}
+<h3><pre>
+* Eating one orange a day or drinking a delicious tangy glass of fresh squeezed orange juice may aid weight loss, boost your 
+  immune system, and produce healthier skin. Oranges are rich in calcium, fibre and vitamin C,B6 and are low in calories
+* Good eye health and Alkalizes the body
+* Lowers the risk of cancer also keeps blood pressure under check
+* Controls blood sugar level and Lowers cholesterol
+* Safeguards against constipation
+* Oranges have a high content of citric acid which aids in skin exfoliation and helps to dry out acne, improving 
+  the overall look of your skin.
+* Antioxidants found in Oranges fight free radicals which may slow down the production of wrinkles, and stop premature aging.
+</pre></h3>
+{% elif text =='Papaya' %}
+<h3><pre>
+* Papayas contain high levels of antioxidants vitamin A, vitamin C, and vitamin E.
+* It has high fiber content may reduce the risk of heart disease. High-fiber diets lower cholesterol levels.
+* Papaya is rich in antioxidants, such as lycopene, that may defend against the visible signs of aging.
+* It is a popular home remedy for melasma.
+* Papaya is a popular home remedy for melasma.
+* Good foe weight loss
+* Safe for diabetics and rerduce Fatigue
+* Low Carb and relieves constipation.
+* Prervents Night Blindness
+* Protects against sunbun and healthy hair.
+</pre></h3>
+{% elif text =='Pomegranate' %}
+<h3><pre>
+* Pomegranates can have up to three times more antioxidants than green tea or red wine. Antioxidants protect cells 
+  from damage, prevent diseases — such as cancer — and reduce inflammation and the effects of aging.
+* Improves memory
+* Pomegranate May Also be Useful Against Breast Cancer
+* It may Help Fight Arthritis and Joint Pain
+* Pomegranate Can Help Fight Bacterial and Fungal Infections
+
+</pre></h3>
+{% elif text =='Sweet Potato' %}
+<h3><pre>
+* Sweet potatoes are a great source of fiber, vitamins, and minerals.
+* Promote Gut Health
+* May Have Cancer-Fighting Properties
+* Support Healthy Vision
+* May Enhance Brain Function
+* They’re also incredibly rich in beta-carotene, which is converted to vitamin A to support 
+  good vision and your immune system.
+
+</pre></h3>
+{% endif %}
+
+
+<br>
+<a style="text-decoration: none;" href="/" role="button">Predict Another Image</a>
+</div>
+</div>
+</body>
+</html>
